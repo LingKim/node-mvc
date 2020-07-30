@@ -1,25 +1,20 @@
 import KOA from 'koa'
-import Router from 'koa-router'
+import helmet from 'koa-helmet'
+import koaBody from "koa-body";
+import cors from '@koa/cors'
+import compose from "koa-compose";
+import routes from './routes/index'
 
 const app = new KOA();
-const router = new Router();
 
-router.get('/api', async (ctx, next) => {
-	ctx.body = {
-		name: "江湖人称李老板",
-		age: "18"
-	}
-})
+const middleware = compose([
+	koaBody(),
+	helmet(),
+	cors()
+])
 
-router.get('/test', async (ctx, next) => {
-	ctx.body = {
-		name: "webstorm",
-		age: "18"
-	}
-})
-
-app.use(router.routes())
-	.use(router.allowedMethods());
+app.use(middleware)
+app.use(routes())
 
 app.listen(3000, () => {
 	console.log(`node服务启动在3000端口`);
