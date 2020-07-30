@@ -11,6 +11,13 @@ router.get('/api', async (ctx, next) => {
 	}
 })
 
+router.get('/test', async (ctx, next) => {
+	ctx.body = {
+		name: "webstorm",
+		age: "18"
+	}
+})
+
 app.use(router.routes())
 	.use(router.allowedMethods());
 
