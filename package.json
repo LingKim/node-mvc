@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon --exec babel-node src/app.js",
+    "dev": "scripty",
+    "prod": "scripty",
     "api:docs": "jsdoc ./src/**/*.js -d ./docs/jsdoc"
   },
   "dependencies": {
@@ -21,7 +22,13 @@
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/node": "^7.10.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
+    "cross-env": "^7.0.2",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-rollup": "^2.17.0",
+    "gulp-watch": "^5.0.1",
     "nodemon": "^2.0.4"
   }
 }
