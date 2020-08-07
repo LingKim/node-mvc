@@ -1,0 +1,14 @@
+
+###
+POST http://localhost:3000/userLogin
+Content-Type: application/x-www-form-urlencoded
+
+name=张三&age=18
+
+
+
+
+### 测试getList
+GET http://localhost:3000/getList
+Accept: application/json
+
