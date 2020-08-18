@@ -17,5 +17,5 @@ app.use(middleware)
 app.use(routes())
 
 app.listen(3000, () => {
-	console.log(`node服务启动在3000端口`);
+	console.log(`node服务启动在3000端口....`);
 })

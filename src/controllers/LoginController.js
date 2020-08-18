@@ -16,7 +16,7 @@ class LoginRouter {
 		try {
 			ctx.body = {
 				code:200,
-				msg:"登录成功",
+				msg:"登录成功....",
 				result:body
 			};
 		}catch (e) {
