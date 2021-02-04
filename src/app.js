@@ -16,6 +16,10 @@ const middleware = compose([
 app.use(middleware)
 app.use(routes())
 
-app.listen(3000, () => {
-	console.log(`node服务启动在3000端口....`);
+app.on('error', (err, ctx) => {
+	console.error('server error', err, ctx)
 })
+
+export default app
+
+

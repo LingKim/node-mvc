@@ -1,0 +1,15 @@
+{
+  "apps": {
+    "name": "node-mvc",
+    "script": "bin/www.js",
+    "watch": [
+      "dist"
+    ],
+    "instances": "1",
+    "max_restarts": "10",
+    "instance_var": "INSTANCE_ID",
+    "error_file": "./logs/err.log",
+    "out_file": "./logs/out.log",
+    "log_date_format": "YYYY-MM-DD HH:mm:ss"
+  }
+}
